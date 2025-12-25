@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Husn-e-No | Custom Apparel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="overlay">
+      <h1 class="brand">Husn-e-No</h1>
+      <p class="tagline">Custom Hoodies & Shirts</p>
+    </div>
+  </header>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <h2>Our Collection</h2>
+    <div id="productList" class="grid"></div>
+  </section>
+
+  <!-- CART -->
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <!-- ADMIN PANEL -->
+  <section class="admin">
+    <h2>Admin Panel</h2>
+
+    <input type="email" id="adminEmail" placeholder="Admin Email">
+    <input type="password" id="adminPassword" placeholder="Password">
+    <button onclick="adminLogin()">Login</button>
+
+    <div id="adminArea" class="hidden">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="number" id="productPrice" placeholder="Price">
+      <input type="file" id="productImage">
+      <button onclick="uploadProduct()">Upload Product</button>
+    </div>
+  </section>
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
